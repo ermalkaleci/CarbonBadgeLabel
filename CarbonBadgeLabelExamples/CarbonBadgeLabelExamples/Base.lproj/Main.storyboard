@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6R-RJ-M3V">
+                                <rect key="frame" x="110" y="60" width="100" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbF-0Q-oOx">
+                                        <rect key="frame" x="26" y="41" width="48" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="KbF-0Q-oOx" firstAttribute="centerX" secondItem="q6R-RJ-M3V" secondAttribute="centerX" id="5vc-xL-mMw"/>
+                                    <constraint firstAttribute="width" constant="100" id="HV4-r5-sJ3"/>
+                                    <constraint firstAttribute="height" constant="100" id="VnO-YP-LE2"/>
+                                    <constraint firstItem="KbF-0Q-oOx" firstAttribute="centerY" secondItem="q6R-RJ-M3V" secondAttribute="centerY" id="Ym7-Q6-e1K"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LeU-VK-Yc8" appends="YES" id="EgE-Zh-Ucj"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPx-ty-6iC">
+                                <rect key="frame" x="123" y="200" width="74" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9H-aj-qDo" customClass="CarbonBadgeLabel">
+                                <rect key="frame" x="147" y="258" width="27" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="padding">
+                                        <size key="value" width="8" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="IPx-ty-6iC" firstAttribute="centerX" secondItem="q6R-RJ-M3V" secondAttribute="centerX" id="6zC-au-Wpc"/>
+                            <constraint firstItem="q6R-RJ-M3V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IZX-Yr-pzn"/>
+                            <constraint firstItem="J9H-aj-qDo" firstAttribute="centerX" secondItem="IPx-ty-6iC" secondAttribute="centerX" id="JNI-aF-2Is"/>
+                            <constraint firstItem="J9H-aj-qDo" firstAttribute="top" secondItem="IPx-ty-6iC" secondAttribute="bottom" constant="40" id="OvJ-aR-3bI"/>
+                            <constraint firstItem="IPx-ty-6iC" firstAttribute="top" secondItem="q6R-RJ-M3V" secondAttribute="bottom" constant="40" id="dxo-n1-rB0"/>
+                            <constraint firstItem="q6R-RJ-M3V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="eU0-U2-gEG"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="messagesLabel" destination="IPx-ty-6iC" id="oiL-q3-Yb1"/>
+                        <outlet property="yellowView" destination="q6R-RJ-M3V" id="wZ5-52-s6c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LeU-VK-Yc8">
+                    <connections>
+                        <action selector="yellowViewTapped:" destination="BYZ-38-t0r" id="EO4-vV-BJq"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="308" y="438"/>
+        </scene>
+    </scenes>
+</document>
