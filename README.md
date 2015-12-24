@@ -2,7 +2,7 @@
 #####CarbonBadgeLabel v0.1
 **This version is unstable. Use at your own risk!**
 
-![alt tag](https://github.com/ermalkaleci/CarbonBadgeLabel/blob/master/screenshot_2.png)
+![alt tag](https://github.com/ermalkaleci/CarbonBadgeLabel/blob/master/Screenshots/screenshot_2.png)
 
 # SAMPLE CODE
 ```objective-c
@@ -13,7 +13,7 @@
 ```
 
 # Xcode Interface builder
-![alt tag](https://github.com/ermalkaleci/CarbonBadgeLabel/blob/master/screenshot_1.png)
+![alt tag](https://github.com/ermalkaleci/CarbonBadgeLabel/blob/master/Screenshots/screenshot_1.png)
 
 # LICENSE
 [The MIT License (MIT)](https://github.com/ermalkaleci/CarbonBadgeLabel/blob/master/LICENSE)
