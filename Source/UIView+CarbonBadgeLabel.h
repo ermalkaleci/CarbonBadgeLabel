@@ -27,11 +27,30 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, CarbonBadgeHorizontalPosition) {
+    CarbonBadgeHorizontalPositionRight  = NSLayoutAttributeRight,
+    CarbonBadgeHorizontalPositionLeft   = NSLayoutAttributeLeft,
+    CarbonBadgeHorizontalPositionCenter = NSLayoutAttributeCenterX
+};
+
+typedef NS_ENUM(NSInteger, CarbonBadgeVerticalPosition) {
+    CarbonBadgeVerticalPositionTop      = NSLayoutAttributeTop,
+    CarbonBadgeVerticalPositionBottom   = NSLayoutAttributeBottom,
+    CarbonBadgeVerticalPositionCenter   = NSLayoutAttributeCenterY
+};
+
+typedef struct {
+    CarbonBadgeHorizontalPosition horizontal;
+    CarbonBadgeVerticalPosition vertical;
+} CarbonBadgeOptions;
+
 @interface UIView (CarbonBadgeLabel)
 
 @property (strong, nonatomic, readonly, nullable) CarbonBadgeLabel *carbonBadgeLabel;
 
-- (CarbonBadgeLabel *)createCarbonBadgeWithText:(nullable NSString *)text;
+- (nonnull CarbonBadgeLabel *)createCarbonBadgeWithText:(nullable NSString *)text;
+- (nonnull CarbonBadgeLabel *)createCarbonBadgeWithText:(nullable NSString *)text
+                                                options:(CarbonBadgeOptions)options;
 - (void)removeCarbonBadge;
 
 @end

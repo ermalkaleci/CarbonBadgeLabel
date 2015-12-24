@@ -20,8 +20,8 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6R-RJ-M3V">
                                 <rect key="frame" x="110" y="60" width="100" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbF-0Q-oOx">
-                                        <rect key="frame" x="26" y="41" width="48" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbF-0Q-oOx">
+                                        <rect key="frame" x="27" y="41" width="47" height="17"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -40,13 +40,13 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPx-ty-6iC">
-                                <rect key="frame" x="123" y="200" width="74" height="20"/>
+                                <rect key="frame" x="124" y="200" width="74" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9H-aj-qDo" customClass="CarbonBadgeLabel">
-                                <rect key="frame" x="147" y="258" width="27" height="26"/>
+                                <rect key="frame" x="146" y="258" width="27" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -56,11 +56,21 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0E-6t-a5F">
+                                <rect key="frame" x="110" y="321" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="CS3-3J-Bu6"/>
+                                    <constraint firstAttribute="width" constant="100" id="TZR-x4-wkn"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="IPx-ty-6iC" firstAttribute="centerX" secondItem="q6R-RJ-M3V" secondAttribute="centerX" id="6zC-au-Wpc"/>
+                            <constraint firstItem="D0E-6t-a5F" firstAttribute="top" secondItem="J9H-aj-qDo" secondAttribute="bottom" constant="40" id="B5z-TB-odn"/>
+                            <constraint firstItem="D0E-6t-a5F" firstAttribute="centerX" secondItem="IPx-ty-6iC" secondAttribute="centerX" id="F6x-vK-NUp"/>
                             <constraint firstItem="q6R-RJ-M3V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IZX-Yr-pzn"/>
                             <constraint firstItem="J9H-aj-qDo" firstAttribute="centerX" secondItem="IPx-ty-6iC" secondAttribute="centerX" id="JNI-aF-2Is"/>
                             <constraint firstItem="J9H-aj-qDo" firstAttribute="top" secondItem="IPx-ty-6iC" secondAttribute="bottom" constant="40" id="OvJ-aR-3bI"/>
@@ -70,6 +80,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="blueView" destination="D0E-6t-a5F" id="Odx-Eg-rhL"/>
                         <outlet property="messagesLabel" destination="IPx-ty-6iC" id="oiL-q3-Yb1"/>
                         <outlet property="yellowView" destination="q6R-RJ-M3V" id="wZ5-52-s6c"/>
                     </connections>

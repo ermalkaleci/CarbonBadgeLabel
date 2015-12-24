@@ -41,37 +41,29 @@ static char kCarbonBadgeLabelKey;
 
 - (CarbonBadgeLabel *)createCarbonBadgeWithText:(NSString *)text {
 	if (!self.carbonBadgeLabel) {
-		self.carbonBadgeLabel = [[CarbonBadgeLabel alloc] init];
-        self.carbonBadgeLabel.font = [UIFont boldSystemFontOfSize:12];
-        self.carbonBadgeLabel.textColor = [UIColor whiteColor];
-        self.carbonBadgeLabel.textAlignment = NSTextAlignmentCenter;
-				
-		[self.superview addSubview:self.carbonBadgeLabel];
-		
-		self.carbonBadgeLabel.translatesAutoresizingMaskIntoConstraints = NO;
-		
-		[self.superview addConstraint:
-		 [NSLayoutConstraint
-		  constraintWithItem:self.carbonBadgeLabel
-		  attribute:NSLayoutAttributeCenterX
-		  relatedBy:NSLayoutRelationEqual
-		  toItem:self
-		  attribute:NSLayoutAttributeRight
-		  multiplier:1
-		  constant:0]];
-		
-		[self.superview addConstraint:
-		 [NSLayoutConstraint
-		  constraintWithItem:self.carbonBadgeLabel
-		  attribute:NSLayoutAttributeCenterY
-		  relatedBy:NSLayoutRelationEqual
-		  toItem:self
-		  attribute:NSLayoutAttributeTop
-		  multiplier:1
-		  constant:0]];
+        
+        [self createCarbonBadgeLabel];
+        
+        [self setupConstraintsInHorizontal:CarbonBadgeHorizontalPositionRight
+                                  vertical:CarbonBadgeVerticalPositionTop];
 	}
 	
 	self.carbonBadgeLabel.text = text;
+    
+    return self.carbonBadgeLabel;
+}
+
+- (CarbonBadgeLabel *)createCarbonBadgeWithText:(NSString *)text
+                                        options:(CarbonBadgeOptions)options {
+    if (!self.carbonBadgeLabel) {
+        
+        [self createCarbonBadgeLabel];
+        
+        [self setupConstraintsInHorizontal:options.horizontal
+                                  vertical:options.vertical];
+    }
+    
+    self.carbonBadgeLabel.text = text;
     
     return self.carbonBadgeLabel;
 }
@@ -80,6 +72,40 @@ static char kCarbonBadgeLabelKey;
     [self.carbonBadgeLabel removeFromSuperview];
     self.carbonBadgeLabel = nil;
     objc_removeAssociatedObjects(self);
+}
+
+- (void)createCarbonBadgeLabel {
+    self.carbonBadgeLabel = [[CarbonBadgeLabel alloc] init];
+    self.carbonBadgeLabel.font = [UIFont boldSystemFontOfSize:12];
+    self.carbonBadgeLabel.textColor = [UIColor whiteColor];
+    self.carbonBadgeLabel.textAlignment = NSTextAlignmentCenter;
+    [self.superview addSubview:self.carbonBadgeLabel];
+}
+
+- (void)setupConstraintsInHorizontal:(NSInteger)horizontal
+                            vertical:(NSInteger)vertical {
+    
+    self.carbonBadgeLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self.superview addConstraint:
+     [NSLayoutConstraint
+      constraintWithItem:self.carbonBadgeLabel
+      attribute:NSLayoutAttributeCenterX
+      relatedBy:NSLayoutRelationEqual
+      toItem:self
+      attribute:horizontal
+      multiplier:1
+      constant:0]];
+    
+    [self.superview addConstraint:
+     [NSLayoutConstraint
+      constraintWithItem:self.carbonBadgeLabel
+      attribute:NSLayoutAttributeCenterY
+      relatedBy:NSLayoutRelationEqual
+      toItem:self
+      attribute:vertical
+      multiplier:1
+      constant:0]];
 }
 
 @end

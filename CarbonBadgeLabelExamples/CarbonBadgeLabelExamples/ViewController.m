@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *yellowView;
 @property (weak, nonatomic) IBOutlet UILabel *messagesLabel;
+@property (weak, nonatomic) IBOutlet UIView *blueView;
 
 @end
 
@@ -22,6 +23,18 @@
     [super viewDidLoad];
 
     [_yellowView createCarbonBadgeWithText:@"2"];
+    
+   
+    CarbonBadgeOptions options = {
+        CarbonBadgeHorizontalPositionCenter,
+        CarbonBadgeVerticalPositionTop
+    };
+
+    CarbonBadgeLabel *carbonBadgeLabel =
+    [_blueView createCarbonBadgeWithText:@"+99" options:options];
+    
+    [carbonBadgeLabel setCircleFillColor:[UIColor greenColor]];
+    [carbonBadgeLabel setTextColor:[UIColor blackColor]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
