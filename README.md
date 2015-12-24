@@ -12,6 +12,14 @@
 [yourView createCarbonBadgeWithText:@"2"];
 ```
 
+```objective-c
+CarbonBadgeOptions options = {
+	CarbonBadgeHorizontalPositionCenter,
+	CarbonBadgeVerticalPositionTop
+};
+[yourView createCarbonBadgeWithText:@"3" options:options];
+```
+
 # Xcode Interface builder
 ![alt tag](https://github.com/ermalkaleci/CarbonBadgeLabel/blob/master/Screenshots/screenshot_1.png)
 
