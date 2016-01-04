@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.description      = "CarbonBadgeLabel is an open source iOS library for badge label"
 
   s.homepage         = "https://github.com/ermalkaleci/CarbonBadgeLabel"
-  s.screenshots      = "https://github.com/ermalkaleci/CarbonBadgeLabel/blob/master/Screenshots/screenshot_2.png"
+  # s.screenshots      = "https://github.com/ermalkaleci/CarbonBadgeLabel/blob/master/Screenshots/screenshot_2.png"
   s.license          = 'MIT'
   s.author           = { "Ermal Kaleci" => "ermalkaleci@gmail.com" }
   s.source           = { :git => "https://github.com/ermalkaleci/CarbonBadgeLabel.git", :tag => s.version.to_s }
