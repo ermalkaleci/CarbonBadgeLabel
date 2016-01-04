@@ -19,39 +19,18 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
-//
 
 #import <UIKit/UIKit.h>
 
-#import "CarbonBadgeLabel.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, CarbonBadgeHorizontalPosition) {
-    CarbonBadgeHorizontalPositionRight  = NSLayoutAttributeRight,
-    CarbonBadgeHorizontalPositionLeft   = NSLayoutAttributeLeft,
-    CarbonBadgeHorizontalPositionCenter = NSLayoutAttributeCenterX
-};
+IB_DESIGNABLE
 
-typedef NS_ENUM(NSInteger, CarbonBadgeVerticalPosition) {
-    CarbonBadgeVerticalPositionTop      = NSLayoutAttributeTop,
-    CarbonBadgeVerticalPositionBottom   = NSLayoutAttributeBottom,
-    CarbonBadgeVerticalPositionCenter   = NSLayoutAttributeCenterY
-};
+@interface CarbonBadgeLabel : UILabel
 
-typedef struct {
-    CarbonBadgeHorizontalPosition horizontal;
-    CarbonBadgeVerticalPosition vertical;
-} CarbonBadgeOptions;
-
-@interface UIView (CarbonBadgeLabel)
-
-@property (strong, nonatomic, readonly, nullable) CarbonBadgeLabel *carbonBadgeLabel;
-
-- (nonnull CarbonBadgeLabel *)createCarbonBadgeWithText:(nullable NSString *)text;
-- (nonnull CarbonBadgeLabel *)createCarbonBadgeWithText:(nullable NSString *)text
-                                                options:(CarbonBadgeOptions)options;
-- (void)removeCarbonBadge;
+@property (nonatomic) IBInspectable CGSize padding; // defualt: CGSize(5, 2)
+@property (nonatomic) IBInspectable BOOL circleShadow; // defulat: YES
+@property (strong, nonatomic, nonnull) IBInspectable UIColor *circleFillColor; // default: red
 
 @end
 

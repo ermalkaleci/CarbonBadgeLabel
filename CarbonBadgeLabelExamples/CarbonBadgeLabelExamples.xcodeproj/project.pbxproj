@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E1FE9FD1C3B13CB00597A2B /* CarbonBadgeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1FE9FA1C3B13CB00597A2B /* CarbonBadgeLabel.m */; };
+		8E1FE9FE1C3B13CB00597A2B /* UIView+CarbonBadgeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1FE9FC1C3B13CB00597A2B /* UIView+CarbonBadgeLabel.m */; };
 		8EB7C7C71C29A6610065128D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB7C7C61C29A6610065128D /* main.m */; };
 		8EB7C7CA1C29A6610065128D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB7C7C91C29A6610065128D /* AppDelegate.m */; };
 		8EB7C7CD1C29A6610065128D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB7C7CC1C29A6610065128D /* ViewController.m */; };
 		8EB7C7D01C29A6610065128D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB7C7CE1C29A6610065128D /* Main.storyboard */; };
 		8EB7C7D21C29A6610065128D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EB7C7D11C29A6610065128D /* Assets.xcassets */; };
 		8EB7C7D51C29A6610065128D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB7C7D31C29A6610065128D /* LaunchScreen.storyboard */; };
-		8EB7C7E11C29A83C0065128D /* CarbonBadgeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB7C7DE1C29A83C0065128D /* CarbonBadgeLabel.m */; };
-		8EB7C7E21C29A83C0065128D /* UIView+CarbonBadgeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB7C7E01C29A83C0065128D /* UIView+CarbonBadgeLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E1FE9F91C3B13CB00597A2B /* CarbonBadgeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonBadgeLabel.h; sourceTree = "<group>"; };
+		8E1FE9FA1C3B13CB00597A2B /* CarbonBadgeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonBadgeLabel.m; sourceTree = "<group>"; };
+		8E1FE9FB1C3B13CB00597A2B /* UIView+CarbonBadgeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CarbonBadgeLabel.h"; sourceTree = "<group>"; };
+		8E1FE9FC1C3B13CB00597A2B /* UIView+CarbonBadgeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CarbonBadgeLabel.m"; sourceTree = "<group>"; };
 		8EB7C7C21C29A6610065128D /* CarbonBadgeLabelExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarbonBadgeLabelExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB7C7C61C29A6610065128D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8EB7C7C81C29A6610065128D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -28,10 +32,6 @@
 		8EB7C7D11C29A6610065128D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EB7C7D41C29A6610065128D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EB7C7D61C29A6610065128D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8EB7C7DD1C29A83C0065128D /* CarbonBadgeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonBadgeLabel.h; sourceTree = "<group>"; };
-		8EB7C7DE1C29A83C0065128D /* CarbonBadgeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonBadgeLabel.m; sourceTree = "<group>"; };
-		8EB7C7DF1C29A83C0065128D /* UIView+CarbonBadgeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CarbonBadgeLabel.h"; sourceTree = "<group>"; };
-		8EB7C7E01C29A83C0065128D /* UIView+CarbonBadgeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CarbonBadgeLabel.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,10 +45,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E1FE9F81C3B13CB00597A2B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8E1FE9F91C3B13CB00597A2B /* CarbonBadgeLabel.h */,
+				8E1FE9FA1C3B13CB00597A2B /* CarbonBadgeLabel.m */,
+				8E1FE9FB1C3B13CB00597A2B /* UIView+CarbonBadgeLabel.h */,
+				8E1FE9FC1C3B13CB00597A2B /* UIView+CarbonBadgeLabel.m */,
+			);
+			name = Sources;
+			path = ../Sources;
+			sourceTree = "<group>";
+		};
 		8EB7C7B91C29A6610065128D = {
 			isa = PBXGroup;
 			children = (
-				8EB7C7DC1C29A83C0065128D /* Source */,
+				8E1FE9F81C3B13CB00597A2B /* Sources */,
 				8EB7C7C41C29A6610065128D /* CarbonBadgeLabelExamples */,
 				8EB7C7C31C29A6610065128D /* Products */,
 			);
@@ -84,18 +96,6 @@
 				8EB7C7C61C29A6610065128D /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8EB7C7DC1C29A83C0065128D /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				8EB7C7DD1C29A83C0065128D /* CarbonBadgeLabel.h */,
-				8EB7C7DE1C29A83C0065128D /* CarbonBadgeLabel.m */,
-				8EB7C7DF1C29A83C0065128D /* UIView+CarbonBadgeLabel.h */,
-				8EB7C7E01C29A83C0065128D /* UIView+CarbonBadgeLabel.m */,
-			);
-			name = Source;
-			path = ../Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,10 +169,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EB7C7CD1C29A6610065128D /* ViewController.m in Sources */,
-				8EB7C7E11C29A83C0065128D /* CarbonBadgeLabel.m in Sources */,
+				8E1FE9FD1C3B13CB00597A2B /* CarbonBadgeLabel.m in Sources */,
 				8EB7C7CA1C29A6610065128D /* AppDelegate.m in Sources */,
-				8EB7C7E21C29A83C0065128D /* UIView+CarbonBadgeLabel.m in Sources */,
 				8EB7C7C71C29A6610065128D /* main.m in Sources */,
+				8E1FE9FE1C3B13CB00597A2B /* UIView+CarbonBadgeLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -271,7 +271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

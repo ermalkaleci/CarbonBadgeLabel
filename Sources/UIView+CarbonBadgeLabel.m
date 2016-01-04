@@ -19,17 +19,20 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
-//
 
 #import "UIView+CarbonBadgeLabel.h"
 
 #import <objc/runtime.h>
 
 static char kCarbonBadgeLabelKey;
+static char kBadgeHorizontalKey;
+static char kBadgeVerticalKey;
 
 @implementation UIView (CarbonBadgeLabel)
 
 @dynamic carbonBadgeLabel;
+@dynamic badgeHorizontal;
+@dynamic badgeVertical;
 
 - (void)setCarbonBadgeLabel:(CarbonBadgeLabel *)label {
     objc_setAssociatedObject(self, &kCarbonBadgeLabelKey, label, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -37,6 +40,22 @@ static char kCarbonBadgeLabelKey;
 
 - (CarbonBadgeLabel *)carbonBadgeLabel {
     return objc_getAssociatedObject(self, &kCarbonBadgeLabelKey);
+}
+
+- (void)setBadgeHorizontal:(NSLayoutConstraint *)badgeHorizontal {
+    objc_setAssociatedObject(self, &kBadgeHorizontalKey, badgeHorizontal, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (NSLayoutConstraint *)badgeHorizontal {
+    return objc_getAssociatedObject(self, &kBadgeHorizontalKey);
+}
+
+- (void)setBadgeVertical:(NSLayoutConstraint *)badgeVertical {
+    objc_setAssociatedObject(self, &kBadgeVerticalKey, badgeVertical, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (NSLayoutConstraint *)badgeVertical {
+    return objc_getAssociatedObject(self, &kBadgeVerticalKey);
 }
 
 - (CarbonBadgeLabel *)createCarbonBadgeWithText:(NSString *)text {
@@ -87,25 +106,23 @@ static char kCarbonBadgeLabelKey;
     
     self.carbonBadgeLabel.translatesAutoresizingMaskIntoConstraints = NO;
     
-    [self.superview addConstraint:
-     [NSLayoutConstraint
-      constraintWithItem:self.carbonBadgeLabel
-      attribute:NSLayoutAttributeCenterX
-      relatedBy:NSLayoutRelationEqual
-      toItem:self
-      attribute:horizontal
-      multiplier:1
-      constant:0]];
+    [self.superview addConstraint: self.badgeHorizontal =
+     [NSLayoutConstraint constraintWithItem:self.carbonBadgeLabel
+                                  attribute:NSLayoutAttributeCenterX
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:self
+                                  attribute:horizontal
+                                 multiplier:1
+                                   constant:0]];
     
-    [self.superview addConstraint:
-     [NSLayoutConstraint
-      constraintWithItem:self.carbonBadgeLabel
-      attribute:NSLayoutAttributeCenterY
-      relatedBy:NSLayoutRelationEqual
-      toItem:self
-      attribute:vertical
-      multiplier:1
-      constant:0]];
+    [self.superview addConstraint: self.badgeVertical =
+     [NSLayoutConstraint constraintWithItem:self.carbonBadgeLabel
+                                  attribute:NSLayoutAttributeCenterY
+                                  relatedBy:NSLayoutRelationEqual
+                                     toItem:self
+                                  attribute:vertical
+                                 multiplier:1
+                                   constant:0]];
 }
 
 @end
