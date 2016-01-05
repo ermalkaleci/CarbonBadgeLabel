@@ -50,7 +50,7 @@ typedef struct {
 @property (weak, nonatomic, nullable) NSLayoutConstraint *badgeVertical; // Constraint for vertical position
 
 /**
- *  Create CarbonBadgeLabel with text on left-top and return the created instance
+ *  Create CarbonBadgeLabel with text on right-top and return the created instance
  *
  *  @param text Badge text
  *
